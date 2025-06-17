@@ -16,7 +16,7 @@ export default function HomeView() {
       <div className="flex flex-col p-4 gap-y-4">
         <h1>Logged in as {session?.user?.name}</h1>
         <button
-          className="p-2 bg-gray-600 rounded-xl border-1 border-blue-800 text-white"
+          className="p-2 bg-primary rounded-xl border-1  text-white"
           onClick={() =>
             signOut({
               fetchOptions: {
