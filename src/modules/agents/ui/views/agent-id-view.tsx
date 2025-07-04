@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useConfirm } from "../../hooks/use-confirm";
 import { useState } from "react";
-import UpdateAgentDialog from "../components/update-agent-dialog copy";
+import UpdateAgentDialog from "../components/update-agent-dialog";
 
 interface Props {
   agentId: string;
