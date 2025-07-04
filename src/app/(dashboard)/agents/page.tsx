@@ -2,7 +2,7 @@ import {
   AgentsView,
   AgentsViewError,
   AgentsViewLoading,
-} from "@/modules/agents/ui/views/agent-view";
+} from "@/modules/agents/ui/views/agents-view";
 import { ErrorBoundary } from "react-error-boundary";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
