@@ -18,7 +18,7 @@ const MeetingListHeader = () => {
             New Meeting
           </Button>
         </div>
-        <div className="flex items-center gap-x-2 p-1">TODO: Filters</div>
+        {/* <div className="flex items-center gap-x-2 p-1">TODO: Filters</div> */}
       </div>
     </>
   );
