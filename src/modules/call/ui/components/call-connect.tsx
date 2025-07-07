@@ -60,6 +60,7 @@ export const CallConnect = ({
     _call.camera.disable();
     _call.microphone.disable();
     setCall(_call);
+
     return () => {
       if (_call.state.callingState !== CallingState.LEFT) {
         _call.leave();

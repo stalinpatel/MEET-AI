@@ -27,6 +27,7 @@ export const meetingsRouter = createTRPCRouter({
         image:
           ctx.auth.user.image ??
           generateAvatarUri({ seed: ctx.auth.user.name, variant: "initials" }),
+        language: "en",
       },
     ]);
     const expirationTime = Math.floor(Date.now() / 1000) + 3600;
@@ -108,6 +109,12 @@ export const meetingsRouter = createTRPCRouter({
           },
         },
       });
+      await call.update({
+        custom: {
+          meetingId: createdMeeting.id,
+          meetingName: createdMeeting.name,
+        },
+      });
 
       const [existingAgent] = await db
         .select()
@@ -129,6 +136,7 @@ export const meetingsRouter = createTRPCRouter({
             seed: existingAgent.name,
             variant: "botttsNeutral",
           }),
+          language: "en",
         },
       ]);
 
